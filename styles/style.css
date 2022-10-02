@@ -18,10 +18,8 @@
    /* выше установили ограничения для секции */
 }
 .logo{
-  display: flex;
   width: 228px;
   height: 32px;
-  position: absolute;
 }
 .logo_place_header{
   margin-top: 30px;
@@ -31,10 +29,11 @@
   align-self: center;
   margin-left: 64px;
   z-index: 6;
-  width: 730px;
+  max-width: 730px;
   font-size: 102px;
   font-weight: 600;
   line-height: 96px;
+  position: absolute;
   display: flex;
  }
 .header__subtitle{
@@ -42,21 +41,24 @@
   bottom: 30px;
   position: absolute;
   z-index: 2;
-  width: 388px;
+  max-width: 388px;
   font-size: 18px;
   line-height: 25px;
   display: inline;
+  margin: 0;
 }
 .header__link{
-  position: absolute;
+  text-decoration: none;
   color:#2f80ed;
 }
 .header__main-illustration{
+  object-fit: contain;
+  object-position: right bottom;
   position: absolute;
-  width: 765px;
-  height: 608px;
   right: 0;
   bottom: 0;
+  width: 765px;
+  height: 608px;
   z-index: 1;
 }
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -78,7 +80,7 @@
   width: 80%;
   justify-content: space-between;
 }
-.two-columns__breif{
+.two-columns__brief{
   width: 175px;
   margin-top: 0;
   margin-bottom: 0;
@@ -92,7 +94,7 @@
   min-width: 784px;
   flex-direction: column;
 }
-.two-columns__paragraf{
+.two-columns__paragraph{
   width: 100%;
   display: flex;
   margin-top: 0;
@@ -101,12 +103,12 @@
   font-size: 24px;
   font-weight: normal;
 }
-.span-accent{
+.two-columns__span-accent{
   line-height: 34px;
   font-size: 24px;
   font-weight: 600;
 }
-.two-columns__paragraf-last{
+.two-columns__paragraph_last{
   margin-bottom: 0;
 }
 .digits{
@@ -114,18 +116,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1100px;
+  margin: 100px auto 100px;
 }
 .section-title{
   justify-content:center;
-  margin-top: 100px;
   width: 60%;
   display: flex;
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
+  margin: 0 auto 0;
 }
 .section-subtitle{
-  margin-top: 20px;
+  margin: 20px auto 0;
   width: 60%;
   line-height: 34px;
   font-size: 24px;
@@ -168,9 +172,10 @@
   font-weight: normal;
 }
 .feynman{
-  margin-top: 100px;
+  box-sizing: border-box;
+  padding-top: 100px;
   display: flex;
-  height: 890px;
+  min-height: 890px;
   position: relative;
   background-color: #f2f2f2;
   flex-direction: column;
@@ -195,7 +200,6 @@
   text-align: center;
 }
 .feynman__link{
-  display: flex;
   position: absolute;
   top: 50%;
   right: 48px;
@@ -217,21 +221,21 @@
   flex-flow: column;
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: #1f1f1f;
   position: relative;
   overflow: hidden;
 }
-.section-title__there_dark{
+.section-title__theme_dark{
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
   justify-content: center;
-  margin-top: 90px;
+  margin: 90px auto 0;
   width: 60%;
   display: flex;
   color: white;
 }
-.section-subtitle__there_dark{
+.section-subtitle__theme_dark{
   margin-top: 20px;
   width: 60%;
   line-height: 34px;
@@ -242,7 +246,7 @@
   margin-bottom: 0;
   color: white;
 }
-.table__there_dark{
+.table__theme_dark{
   margin: 0 auto 90px;
   display: flex;
   justify-content: space-between;
@@ -257,7 +261,7 @@
   margin-right: 0;
   margin-top: 80px;
 }
-.table__heading_there_dark{
+.table__heading_theme_dark{
   width: 100%;
   margin-bottom: 20px;
   margin-top: 0px;
@@ -265,7 +269,7 @@
   font-size: 24px;
   font-weight: 600;
 }
-.table__text_there_dark{
+.table__text_theme_dark{
   width: 100%;
   margin: 0;
   line-height: 1.2;
@@ -273,6 +277,7 @@
   font-weight: normal;
 }
 .kaufman__triangle{
+  background-size: cover;
   position: absolute;
   width: 877px;
   height: 877px;
@@ -284,7 +289,7 @@
 .footer{
   min-height: 350px;
   display: flex;
-  background-color: black;
+  background-color: #1f1f1f;
   justify-content: center;
 }
 .footer__column{
@@ -308,8 +313,7 @@
   display: flex;
   flex-direction: column;
 }
-.logo__place_footer{
-  position: absolute;
+.logo_place_footer{
   margin-top: 0;
   margin-left: 0;
 }
@@ -320,7 +324,6 @@
   left: 0;
   bottom: 18px;
   margin-top: 18px;
-  position: absolute;
 }
 .footer__column-heading{
   line-height: 30px;
