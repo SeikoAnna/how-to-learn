@@ -1,5 +1,5 @@
 @import url(../vendor/normalize.css);
-@import url(../blocks/link/__hover/link__hover.css);
+@import url(../blocks/link/link_hover.css);
 @import url(../blocks/logo/logo.css);
 @import url(../blocks/rotation/rotation.css);
 @import url(../blocks/section-subtitle/section-subtitle.css);
