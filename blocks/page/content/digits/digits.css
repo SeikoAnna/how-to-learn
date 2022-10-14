@@ -1,0 +1,8 @@
+.digits{
+    flex-flow: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: 100px auto 0;
+}

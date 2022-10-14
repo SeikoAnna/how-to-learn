@@ -1,0 +1,8 @@
+
+.link__hover{
+    transition: color 3s linear 4s;
+}
+.link__hover:hover{
+    color:#2f80ed;
+    opacity: .3;
+}
